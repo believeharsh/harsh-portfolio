@@ -1,0 +1,37 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": [
+    "next.config.ts",
+    "src/app/**/*.{ts,tsx}",
+    "eslint.config.mjs",
+    "postcss.config.mjs",
+    "lint-staged.config.mjs"
+  ],
+  "project": ["**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}"],
+  "ignore": [
+    "**/*.d.ts",
+    "src/components/ui/**",
+    "src/lib/utils.ts",
+    "src/hooks/use-mobile.ts"
+  ],
+  "ignoreDependencies": [
+    "eslint-config-next",
+    "eslint-config-prettier",
+    "lint-staged",
+    "prettier-plugin-tailwindcss",
+    "@trivago/prettier-plugin-sort-imports",
+
+    "tailwindcss",
+    "tw-animate-css",
+    "postcss",
+    "@tailwindcss/postcss",
+
+    "clsx",
+    "tailwind-merge",
+    "class-variance-authority"
+  ],
+  "ignoreExportsUsedInFile": {
+    "interface": true,
+    "type": true
+  }
+}
