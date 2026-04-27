@@ -1,22 +1,14 @@
-import type { Metadata } from "next";
-import { Geist_Mono, Hanken_Grotesk } from "next/font/google";
+import { ThemeProvider } from '@/components/common/ThemeProviders';
+import { TooltipProvider } from '@/components/ui/tooltip';
+import type { Metadata } from 'next';
+import { ViewTransitions } from 'next-view-transitions';
 
-import "./globals.css";
-
-const hanken = Hanken_Grotesk({
-  variable: "--font-hanken",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Harsh Dahiya - Software Engineer Portfolio",
+  title: 'Harsh Dahiya - Software Engineer Portfolio',
   description:
-    "Portfolio of Harsh Dahiya, a software engineer specializing in full stack development",
+    'Portfolio of Harsh Dahiya, a software engineer specializing in full stack development',
 };
 
 export default function RootLayout({
@@ -25,12 +17,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${hanken.variable} ${geistMono.variable} selection:bg-orange font-sans antialiased selection:text-white`}
-      >
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+        <body className={`font-hanken-grotesk antialiased`}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <TooltipProvider>{children}</TooltipProvider>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
