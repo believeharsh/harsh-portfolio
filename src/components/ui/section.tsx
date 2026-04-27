@@ -1,8 +1,7 @@
-"use client";
+'use client';
 
-import { motion } from "motion/react";
-
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
+import { motion } from 'motion/react';
 
 interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
@@ -21,13 +20,13 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn("px-6 py-[90px] md:px-[5%]", className)}
+      className={cn('px-6 py-[90px] md:px-[5%]', className)}
       {...props}
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
         className="mx-auto w-full max-w-[1200px]"
       >
@@ -57,8 +56,8 @@ export function SectionHeader({
       )}
       <h2
         className={cn(
-          "font-heading text-3xl leading-tight font-black md:text-5xl",
-          lightTheme ? "text-text" : "text-white",
+          'font-heading text-3xl leading-tight font-black md:text-5xl',
+          lightTheme ? 'text-text' : 'text-white',
         )}
       >
         {title} {subtitle && <span className="text-orange">{subtitle}</span>}
