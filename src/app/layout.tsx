@@ -1,7 +1,9 @@
+import Navbar from '@/components/common/Navbar';
 import { ThemeProvider } from '@/components/common/ThemeProviders';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import type { Metadata } from 'next';
 import { ViewTransitions } from 'next-view-transitions';
+import { Footer } from 'react-day-picker';
 
 import './globals.css';
 
@@ -26,7 +28,11 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <TooltipProvider>{children}</TooltipProvider>
+            <TooltipProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </TooltipProvider>
           </ThemeProvider>
         </body>
       </html>

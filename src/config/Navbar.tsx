@@ -15,7 +15,7 @@ export const navbarConfig = {
     },
     {
       label: 'Experience',
-      href: '/work-experience',
+      href: '/experience',
     },
   ] as NavbarItems[],
 };

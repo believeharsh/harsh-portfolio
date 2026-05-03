@@ -15,7 +15,7 @@ export default function Navbar() {
             <Link
               key={item.label}
               href={item.href}
-              className="text-muted-foreground text-md tracking-wide"
+              className="text-muted-foreground font-medium text-md tracking-wide"
             >
               {item.label}
             </Link>
