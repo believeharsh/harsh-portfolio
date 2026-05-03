@@ -4,7 +4,6 @@ import { landingHeroConfig, socialLinks } from '@/config/LandingHero';
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
 
-import AnimatedNodeIcon from '../svgs/technologies/Node';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 import GreetingInMultipleLanguage from './GreetingInMultipleLanguage';
 
@@ -17,7 +16,6 @@ export default function Hero() {
           <h1 className="text-3xl font-semibold">{landingHeroConfig.name}</h1>
           <p className="text-muted-foreground max-w-[500px] text-balance leading-relaxed">
             {landingHeroConfig.bio}
-            <AnimatedNodeIcon />
           </p>
           <div className="flex items-center gap-3 mt-8">
             {socialLinks.map((link) => (

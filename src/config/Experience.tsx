@@ -1,5 +1,13 @@
 import LucideIcon from '@/components/lucide-icons/LucideIconMap';
-import AnimatedNodeIcon from '@/components/svgs/technologies/Node.js';
+import ExpressJs from '@/components/svgs/technologies/ExpressJs';
+import Firebase from '@/components/svgs/technologies/Firebase';
+import GCP from '@/components/svgs/technologies/GCP';
+import MongoDB from '@/components/svgs/technologies/MongoDB';
+import NodeJs from '@/components/svgs/technologies/NodeJs';
+import Postman from '@/components/svgs/technologies/Postman';
+import ReactIcon from '@/components/svgs/technologies/ReactIcon';
+import TailwindCss from '@/components/svgs/technologies/TailwindCss';
+import TypeScript from '@/components/svgs/technologies/TypeScript';
 import React from 'react';
 
 export interface Technologies {
@@ -28,7 +36,7 @@ export const experiences: Experience[] = [
     position: 'Full Stack Engineer Intern',
     location: 'Pune, Maharashtra, India (Remote)',
     image: '',
-    companyLogo: '',
+    companyLogo: '/company/evoltsoft.png',
     startDate: 'Jan 2026',
     endDate: 'Present',
     descritption: [
@@ -40,35 +48,84 @@ export const experiences: Experience[] = [
     companyLinkedinPageUrl: 'https://www.linkedin.com/company/evoltsoft',
     technologies: [
       {
-        name: 'Firebase',
-        href: 'https://firebase.google.com/',
-        // icon: <LucideIcon name="" size={26} />
-        icon: <AnimatedNodeIcon />,
+        name: 'Express',
+        href: '',
+        icon: <ExpressJs />,
       },
-      // {
-      //   name: "OCPP",
-      //   href: "https://ocpp.org/",
-      //   icon: <LucideIcon name="ocpp" size={26} />
-      // },
-      // {
-      //   name: "OCPI",
-      //   href: "https://ocpi.io/",
-      //   icon: <LucideIcon name="ocpi" size={26} />
-      // },
+      {
+        name: 'Node',
+        href: '',
+        icon: <NodeJs />,
+      },
+      {
+        name: 'TypeScript',
+        href: '',
+        icon: <TypeScript />,
+      },
+      {
+        name: 'Postman',
+        href: '',
+        icon: <Postman />,
+      },
+      {
+        name: 'Firebase',
+        href: '',
+        icon: <Firebase />,
+      },
+      {
+        name: 'GCP',
+        href: '',
+        icon: <GCP />,
+      },
     ],
     isWorking: true,
   },
   {
     company: 'iTUX',
-    position: 'Full Stack Developer Intern',
+    position: 'Full Stack Developer (Intern)',
     location: 'Pune, Maharashtra, India (Remote)',
     image: '',
-    companyLogo: '',
+    companyLogo: '/company/iTUX.png',
     startDate: 'Jul 2023',
     endDate: 'Dec 2023',
-    descritption: [],
+    descritption: [
+      'Led development of CRM platform landing page using React, Tailwind CSS, and TypeScript',
+      'Built scalable backend with Node.js, Express, and MongoDB with optimized RESTful APIs',
+      'Integrated Razorpay payment gateway and Cloudinary image management',
+    ],
     companyLinkedinPageUrl: 'https://www.linkedin.com/company/itux',
-    technologies: [],
+    technologies: [
+      {
+        name: 'Express',
+        href: '',
+        icon: <ExpressJs />,
+      },
+      {
+        name: 'Node',
+        href: '',
+        icon: <NodeJs />,
+      },
+      {
+        name: 'TypeScript',
+        href: '',
+        icon: <TypeScript />,
+      },
+      {
+        name: 'React',
+        href: '',
+        icon: <ReactIcon />,
+      },
+      {
+        name: 'MongoDB',
+        href: '',
+        icon: <MongoDB />,
+      },
+      {
+        name: 'Tailwind',
+        href: '',
+        icon: <TailwindCss />,
+      },
+    ],
     isWorking: false,
   },
 ];
