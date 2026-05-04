@@ -59,7 +59,9 @@ export default function ExperienceCard({
                 </p>
               </div>
             </div>
-
+            <h4 className="text-foreground font-semibold text-md">
+              Work I did
+            </h4>
             {/* Role Description */}
             <div className="flex flex-col gap-2 mb-4">
               {role.descritption.map((desc: string, i: number) => (
@@ -71,7 +73,9 @@ export default function ExperienceCard({
                 </p>
               ))}
             </div>
-
+            <h4 className="text-foreground font-semibold text-md">
+              Technology & Tools
+            </h4>
             {/* Role Technologies */}
             {role.technologies && role.technologies.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-2">
