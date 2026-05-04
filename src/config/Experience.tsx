@@ -1,9 +1,10 @@
-import LucideIcon from '@/components/lucide-icons/LucideIconMap';
 import ExpressJs from '@/components/svgs/technologies/ExpressJs';
 import Firebase from '@/components/svgs/technologies/Firebase';
 import GCP from '@/components/svgs/technologies/GCP';
 import MongoDB from '@/components/svgs/technologies/MongoDB';
 import NodeJs from '@/components/svgs/technologies/NodeJs';
+import Ocpi from '@/components/svgs/technologies/Ocpi';
+import Ocpp from '@/components/svgs/technologies/Ocpp';
 import Postman from '@/components/svgs/technologies/Postman';
 import ReactIcon from '@/components/svgs/technologies/ReactIcon';
 import TailwindCss from '@/components/svgs/technologies/TailwindCss';
@@ -16,116 +17,101 @@ export interface Technologies {
   icon: React.ReactNode;
 }
 
+export interface Role {
+  position: string;
+  startDate: string;
+  endDate: string;
+  duration?: string;
+  descritption: string[];
+  technologies?: Technologies[];
+}
+
 export interface Experience {
   company: string;
-  position: string;
   location: string;
   image?: string;
   companyLogo: string;
-  startDate: string;
-  endDate: string;
-  descritption: string[];
+  overallDuration?: string;
   companyLinkedinPageUrl?: string;
-  technologies: Technologies[];
   isWorking: boolean;
+  roles: Role[];
 }
 
 export const experiences: Experience[] = [
   {
     company: 'Evoltsoft Technologies',
-    position: 'Full Stack Engineer Intern',
     location: 'Pune, Maharashtra, India (Remote)',
+    overallDuration: 'Jan 2026 - Present · 5 mos',
     image: '',
     companyLogo: '/company/evoltsoft.png',
-    startDate: 'Jan 2026',
-    endDate: 'Present',
-    descritption: [
-      'Developing backend for EV Charging Station Management System (CSMS) using Firebase',
-      'Implementing OCPP and OCPI protocols for seamless charger communication and interoperability',
-      'Building scalable APIs and backend services for white-label EV solutions including portals and mobile apps',
-      'Optimizing real-time data handling, session management, and charging workflows',
-    ],
     companyLinkedinPageUrl: 'https://www.linkedin.com/company/evoltsoft',
-    technologies: [
+    isWorking: true,
+    roles: [
       {
-        name: 'Express',
-        href: '',
-        icon: <ExpressJs />,
-      },
-      {
-        name: 'Node',
-        href: '',
-        icon: <NodeJs />,
-      },
-      {
-        name: 'TypeScript',
-        href: '',
-        icon: <TypeScript />,
-      },
-      {
-        name: 'Postman',
-        href: '',
-        icon: <Postman />,
-      },
-      {
-        name: 'Firebase',
-        href: '',
-        icon: <Firebase />,
-      },
-      {
-        name: 'GCP',
-        href: '',
-        icon: <GCP />,
+        position: 'Full Stack Engineer Intern',
+        startDate: 'Jan 2026',
+        endDate: 'Present',
+        descritption: [
+          'Developing backend for EV Charging Station Management System (CSMS) using Firebase',
+          'Implementing OCPP and OCPI protocols for seamless charger communication and interoperability',
+          'Building scalable APIs and backend services for white-label EV solutions including portals and mobile apps',
+          'Optimizing real-time data handling, session management, and charging workflows',
+        ],
+        technologies: [
+          { name: 'Express', href: '', icon: <ExpressJs /> },
+          { name: 'Node', href: '', icon: <NodeJs /> },
+          { name: 'TypeScript', href: '', icon: <TypeScript /> },
+          { name: 'Postman', href: '', icon: <Postman /> },
+          { name: 'Firebase', href: '', icon: <Firebase /> },
+          { name: 'GCP', href: '', icon: <GCP /> },
+          { name: 'OCPP', href: '', icon: <Ocpp /> },
+          { name: 'OCPI', href: '', icon: <Ocpi /> },
+        ],
       },
     ],
-    isWorking: true,
   },
   {
     company: 'iTUX',
-    position: 'Full Stack Developer (Intern)',
-    location: 'Pune, Maharashtra, India (Remote)',
+    location: 'Aurangabad, Maharashtra, India (Remote)',
+    overallDuration: 'Jun 2025 - Dec 2025 · 7 mos',
     image: '',
     companyLogo: '/company/iTUX.png',
-    startDate: 'Jul 2023',
-    endDate: 'Dec 2023',
-    descritption: [
-      'Led development of CRM platform landing page using React, Tailwind CSS, and TypeScript',
-      'Built scalable backend with Node.js, Express, and MongoDB with optimized RESTful APIs',
-      'Integrated Razorpay payment gateway and Cloudinary image management',
-    ],
     companyLinkedinPageUrl: 'https://www.linkedin.com/company/itux',
-    technologies: [
+    isWorking: false,
+    roles: [
       {
-        name: 'Express',
-        href: '',
-        icon: <ExpressJs />,
+        position: 'Full-stack Developer (Intern)',
+        startDate: 'Oct 2025',
+        endDate: 'Dec 2025',
+        duration: '3 mos',
+        descritption: [
+          'Developed and maintained CRM features using the MERN stack (𝐌𝐨𝐧𝐠𝐨𝐃𝐁, 𝐄𝐱𝐩𝐫𝐞𝐬𝐬, 𝐑𝐞𝐚𝐜𝐭, 𝐍𝐨𝐝𝐞.𝐣𝐬), handling both frontend and backend tasks.',
+          'Integrated 𝐑𝐚𝐳𝐨𝐫𝐩𝐚𝐲 payment gateway for secure and smooth transactions within the application.',
+          'Optimized 𝐃𝐚𝐭𝐚 𝐅𝐞𝐭𝐜𝐡𝐢𝐧𝐠 and state management using 𝐑𝐓𝐊 𝐐𝐮𝐞𝐫𝐲, reducing unnecessary API calls and improving performance.',
+        ],
+        technologies: [
+          { name: 'MongoDB', href: '', icon: <MongoDB /> },
+          { name: 'Express', href: '', icon: <ExpressJs /> },
+          { name: 'React', href: '', icon: <ReactIcon /> },
+          { name: 'Node', href: '', icon: <NodeJs /> },
+        ],
       },
       {
-        name: 'Node',
-        href: '',
-        icon: <NodeJs />,
-      },
-      {
-        name: 'TypeScript',
-        href: '',
-        icon: <TypeScript />,
-      },
-      {
-        name: 'React',
-        href: '',
-        icon: <ReactIcon />,
-      },
-      {
-        name: 'MongoDB',
-        href: '',
-        icon: <MongoDB />,
-      },
-      {
-        name: 'Tailwind',
-        href: '',
-        icon: <TailwindCss />,
+        position: 'Frontend Developer (Intern)',
+        startDate: 'Jun 2025',
+        endDate: 'Sep 2025',
+        duration: '4 mos',
+        descritption: [
+          'Built responsive and user-friendly UI screens using 𝐑𝐞𝐚𝐜𝐭, 𝐓𝐲𝐩𝐞𝐒𝐜𝐫𝐢𝐩𝐭, 𝐚𝐧𝐝 𝐓𝐚𝐢𝐥𝐰𝐢𝐧𝐝 𝐂𝐒𝐒, following modern design practices.',
+          'Developed a complete company landing page from scratch, ensuring clean layout, 𝐫𝐞𝐮𝐬𝐚𝐛𝐢𝐥𝐢𝐭𝐲, and 𝐦𝐨𝐛𝐢𝐥𝐞 𝐫𝐞𝐬𝐩𝐨𝐧𝐬𝐢𝐯𝐞𝐧𝐞𝐬𝐬.',
+          'Worked closely with 𝐝𝐞𝐬𝐢𝐠𝐧𝐞𝐫𝐬 and backend developers to integrate 𝐀𝐏𝐈𝐬 and improve overall user experience.',
+        ],
+        technologies: [
+          { name: 'React', href: '', icon: <ReactIcon /> },
+          { name: 'TypeScript', href: '', icon: <TypeScript /> },
+          { name: 'Tailwind', href: '', icon: <TailwindCss /> },
+        ],
       },
     ],
-    isWorking: false,
   },
 ];

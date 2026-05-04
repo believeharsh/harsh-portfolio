@@ -11,7 +11,9 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-foreground py-5">{heading}</h2>
+      <h2 className="text-3xl font-bold text-foreground py-2 tracking-tight">
+        {heading}
+      </h2>
       {/* <p className="text-foreground text-lg">{subHeading}</p>   */}
     </div>
   );
